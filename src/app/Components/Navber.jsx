@@ -71,7 +71,7 @@ const Navber = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className=" navbar-end">
           <a className="btn bg-[#8d493a] text-white">Contact Us</a>
         </div>
       </div>

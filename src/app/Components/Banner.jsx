@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-
+import { motion } from "motion/react";
 const Banner = () => {
   return (
     <section className="relative h-screen flex items-center justify-center text-center">
@@ -10,10 +11,15 @@ const Banner = () => {
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#8d493a]/20"></div>
+      <div className="absolute inset-0 bg-[#8d493a]/30"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-4xl mx-auto px-4"
+      >
         <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
           Timeless Comfort &<br /> Endless Luxury
         </h1>
@@ -31,7 +37,7 @@ const Banner = () => {
             Explore Expertise
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
