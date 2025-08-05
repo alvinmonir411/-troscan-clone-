@@ -50,7 +50,7 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <Link href="/" className="btn text-xl font-bold">
+          <Link href="/" className=" p-1 text-xl font-bold">
             Troscán
           </Link>
         </div>
