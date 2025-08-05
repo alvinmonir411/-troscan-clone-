@@ -31,16 +31,16 @@ const Navber = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link href="/" className="font-bold text-[16px]">
-                  About{" "}
+                <Link href="/about" className="font-bold text-[16px]">
+                  about{" "}
                 </Link>
               </li>
               <li>
-                <Link href="/" className="font-bold text-[16px]">
-                  Project{" "}
+                <Link href="/projects" className="font-bold text-[16px]">
+                  projects
                 </Link>
               </li>
               <li>
@@ -50,17 +50,19 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl font-bold">Troscán</a>
+          <Link href="/" className="btn text-xl font-bold">
+            Troscán
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="/" className="font-bold text-[16px]">
-                About{" "}
+              <Link href="/about" className="font-bold text-[16px]">
+                About
               </Link>
             </li>
             <li>
-              <Link href="/" className="font-bold text-[16px]">
+              <Link href="/projects" className="font-bold text-[16px]">
                 Project{" "}
               </Link>
             </li>

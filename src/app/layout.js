@@ -1,16 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navber from "./Components/Navber";
-import Banner from "./Components/Banner";
-import About from "./Components/About";
-// import ScrollStackImages from "./Components/ScrollStackImages";
-
-import ScrollStackImages from "./Components/ScrollStackImages";
-import ServicesSection from "./Components/ServicesSection";
-import GetinTouch from "./Components/GetinTouch";
-import NewsCard from "./Components/NewsCard";
-import Footer from "./Components/Footer";
-
+import Navber from "@/Components/Navber";
+import Footer from "@/Components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,15 +24,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navber />
-        <Banner />
-        <About />
-        {/* <New /> */}
-        <ScrollStackImages />
-        <ServicesSection />
-        <GetinTouch />
-        <NewsCard />
-        <Footer />
         {children}
+        <Footer />
       </body>
     </html>
   );

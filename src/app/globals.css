@@ -2,4 +2,5 @@
 @plugin "daisyui";
 body {
   background-color: #f8ede3;
+  scroll-behavior: smooth;
 }
