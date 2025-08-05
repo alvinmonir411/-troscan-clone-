@@ -1,8 +1,8 @@
-// Components/AwardsSection.jsx
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const AwardsSection = () => {
-  // Define the awards data directly within this component
   const awardsData = [
     {
       title: "Best Interior Design Agency",
@@ -34,10 +34,34 @@ const AwardsSection = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="bg-troscon-bg py-20 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      className="bg-troscon-bg py-20 px-4 sm:px-6 lg:px-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
       {/* Section Header */}
-      <div className=" container mx-auto mb-16">
+      <motion.div className="container mx-auto mb-16" variants={itemVariants}>
         <p className="text-sm uppercase tracking-wider text-troscon-dark-text opacity-70 mb-2">
           • Awards & Recognition
         </p>
@@ -45,32 +69,31 @@ const AwardsSection = () => {
           Our Achievements: <br className="hidden sm:inline" />
           Celebrating Excellence <br className="hidden sm:inline" /> in Design
         </h2>
-      </div>
+      </motion.div>
 
-      {/* Awards List Container */}
-      <div className="container mx-auto">
+      {/* Awards List */}
+      <motion.div className="container mx-auto" variants={containerVariants}>
         {awardsData.map((award, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-12 py-6 border-b border-troscon-line items-center
-                        ${index === 0 ? "border-t" : ""}`}
+            variants={itemVariants}
+            className={`grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-12 py-6 border-b border-troscon-line items-center ${
+              index === 0 ? "border-t" : ""
+            }`}
           >
             <div className="col-span-1 text-troscon-dark-text text-xl font-medium text-left">
               {award.title}
             </div>
-
-            {/* Description */}
             <div className="col-span-1 text-troscon-light-text text-base text-left">
               {award.description}
             </div>
-
             <div className="col-span-1 text-troscon-dark-text text-xl text-left md:text-right font-medium">
               {award.year}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
