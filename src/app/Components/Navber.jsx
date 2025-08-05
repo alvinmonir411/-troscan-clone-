@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Navber = () => {
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       className="bg-[#f8ede3] fixed top-5 z-50 rounded-xl  left-0 right-0 max-w-3xl mx-auto text-[#8d493a]"
