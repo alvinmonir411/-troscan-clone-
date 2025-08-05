@@ -3,6 +3,10 @@ import "./globals.css";
 import Navber from "./Components/Navber";
 import Banner from "./Components/Banner";
 import About from "./Components/About";
+// import ScrollStackImages from "./Components/ScrollStackImages";
+import New from "./Components/New";
+import ScrollStackImages from "./Components/ScrollStackImages";
+import ServicesSection from "./Components/ServicesSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +32,9 @@ export default function RootLayout({ children }) {
         <Navber />
         <Banner />
         <About />
+        {/* <New /> */}
+        <ScrollStackImages />
+        <ServicesSection />
         {children}
       </body>
     </html>
