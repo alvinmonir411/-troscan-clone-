@@ -8,6 +8,8 @@ import About from "./Components/About";
 import ScrollStackImages from "./Components/ScrollStackImages";
 import ServicesSection from "./Components/ServicesSection";
 import GetinTouch from "./Components/GetinTouch";
+import NewsCard from "./Components/NewsCard";
+import Footer from "./Components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +39,8 @@ export default function RootLayout({ children }) {
         <ScrollStackImages />
         <ServicesSection />
         <GetinTouch />
+        <NewsCard />
+        <Footer />
         {children}
       </body>
     </html>

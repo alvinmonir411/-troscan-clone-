@@ -8,7 +8,7 @@ const Navber = () => {
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="bg-[#f8ede3] fixed top-5 z-50 rounded-xl  left-0 right-0 max-w-3xl mx-auto text-[#8d493a]"
+      className="bg-[#f7efe8] fixed top-5 z-50 rounded-xl  left-0 right-0 max-w-3xl mx-auto text-[#8d493a]"
     >
       <div className="navbar  shadow-sm">
         <div className="navbar-start">

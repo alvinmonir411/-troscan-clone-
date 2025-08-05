@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const About = () => {
   return (
     <section className="bg-[#f8ede3] max-h-[calc(100% - 400px)] py-16 md:py-24">
-      {/* Main container with responsive padding */}
+ 
       <div className=" mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column: Text Content */}
@@ -57,7 +57,7 @@ const About = () => {
               alt="Comfortable living room with modern furniture"
               width={600}
               height={750}
-              className="w-full h-auto rounded-2xl object-cover"
+              className="w-full h-auto rounded-2xl object-cover transition-transform duration-700 ease-in-out transform group-hover:scale-105 group-hover:opacity-80"
             />
           </div>
         </div>
