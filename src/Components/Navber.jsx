@@ -44,7 +44,7 @@ const Navber = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="font-bold text-[16px]">
+                <Link href="/news" className="font-bold text-[16px]">
                   News{" "}
                 </Link>
               </li>
@@ -67,14 +67,16 @@ const Navber = () => {
               </Link>
             </li>
             <li>
-              <Link href="/" className="font-bold text-[16px]">
+              <Link href="/news" className="font-bold text-[16px]">
                 News{" "}
               </Link>
             </li>
           </ul>
         </div>
         <div className=" navbar-end">
-          <a className="btn bg-[#8d493a] text-white">Contact Us</a>
+          <Link href={"/contact"} className="btn bg-[#8d493a] text-white">
+            Contact Us
+          </Link>
         </div>
       </div>
       {/* <div className=" p-3 flex justify-between items-center mx-auto ">

@@ -17,7 +17,6 @@ const page = () => {
     },
     {
       slug: "luxurious-coastal-living",
-
       img: "/projects3.avif",
       title: "Luxurious Coastal Living",
       description: "Bringing the beauty of the shore into your home.",
