@@ -1,12 +1,16 @@
 "use client";
+
 import { Projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
+import { use } from "react";
 
 const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-");
 
 const Page = ({ params }) => {
-  const project = Projects.find((proj) => slugify(proj.title) === params.slug);
+  const { slug } = use(params);
+
+  const project = Projects.find((proj) => slugify(proj.title) === slug);
 
   if (!project) return notFound();
 

@@ -56,7 +56,7 @@ export const Projects = [
   {
     slug: "luxurious-coastal-living",
     img: "/projects3.avif",
-    title: "Modern Elegance in Every Room",
+    title: "Luxurious Coastal Living",
     description: "Redefining sophistication with timeless design.",
     details: {
       intro:
@@ -82,7 +82,7 @@ export const Projects = [
   {
     slug: "serene-urban-retreat",
     img: "/projects4.avif",
-    title: "Modern Elegance in Every Room",
+    title: "Serene Urban Retreat",
     description: "Redefining sophistication with timeless design.",
     details: {
       intro:

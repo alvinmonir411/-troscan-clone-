@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -37,12 +39,14 @@ const page = () => {
       <div>
         <div className="container mx-auto md:mb-30 mt-4 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           {Projects.map((project, index) => (
-            <Link href={`/projects/${project.slug}`}>
-              <div key={index} className="space-y-4 group">
+            <Link key={project.slug} href={`/projects/${project.slug}`}>
+              <div className="space-y-4 group">
                 <div className="overflow-hidden rounded-xl w-full h-[300px] md:h-[560px]">
-                  <img
+                  <Image
                     src={project.img}
                     alt={project.title}
+                    width={800}
+                    height={600}
                     className="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition duration-500 ease-in-out"
                   />
                 </div>
